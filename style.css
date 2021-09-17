@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html{
+    font-size: 62.5%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #eeedec;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+  width: 20vw;
+  min-height: 60vh;
+  border-radius: .5rem;
+  padding: 2rem;
+  background-color: #CCCCFF;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  position: relative;
+}
+.wave{
+    opacity: .3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: white;
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -25rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+}
+.wave.-three{
+    animation: drift 5000ms infinite linear;
+    z-index: 2 !important;
+    opacity: .2;
+}
+.wave.-two{
+    animation: drift 7000ms infinite linear;
+    opacity: .1;
+    z-index:3 !important;
+}
+.box::after{
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transform: translate3d(0,0,0);
+}
+@keyframes drift{
+    from{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
+
+#weathercon{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+#weathercon .fas{
+    font-size: 6rem;
+    animation: fas-anime 3s linear infinite alternate;
+}
+@keyframes fas-anime {
+    from{
+        transform: scale(1.2);
+    }
+    to{
+        transform: scale(1.7);
+    }
+}
+
+.info{
+    width: 100%;
+    text-align: center;
+    z-index: 20;
+}
+.loaction, .temp{
+    padding: 2rem 0 .5rem 0;
+    font-size: 2.2rem;
+}
+.date, .tempmin_max{
+    font-size: 1.6remrem;
+    font-weight: normal;
+}
+.fa-street-view{
+    animation: rotates 3s linear infinite alternate;
+}
+@keyframes rotates{
+    from{
+        transform: translateX(-.5rem);
+    }
+    to{
+        transform: translateX(.5rem);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:998px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 45%;
+    }
+}
