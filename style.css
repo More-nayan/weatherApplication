@@ -17,7 +17,7 @@ body{
     justify-content: center;
 }
 .box{
-  width: 20vw;
+  min-width: 20vw;
   min-height: 60vh;
   border-radius: .5rem;
   padding: 2rem;
@@ -72,7 +72,6 @@ body{
         transform: rotate(360deg);
     }
 }
-
 #weathercon{
     width: 100%;
     padding: 1rem;
@@ -91,7 +90,6 @@ body{
         transform: scale(1.7);
     }
 }
-
 .info{
     width: 100%;
     text-align: center;
@@ -102,7 +100,7 @@ body{
     font-size: 2.2rem;
 }
 .date, .tempmin_max{
-    font-size: 1.6remrem;
+    font-size: 1.6rem;
     font-weight: normal;
 }
 .fa-street-view{
@@ -117,18 +115,7 @@ body{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-@media(max-width:998px){
+ @media(max-width:998px){
     html{
         font-size: 55%;
     }
@@ -137,4 +124,4 @@ body{
     html{
         font-size: 45%;
     }
-}
+} 
